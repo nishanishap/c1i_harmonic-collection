@@ -28,6 +28,34 @@
       background-color: #ffccbc;
       transform: scale(1.05);
     }
+    .content-section {
+      display: none;
+      margin-top: 20px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .content-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 15px;
+    }
+    .button-container {
+      margin: 40px 0;
+    }
+    .button {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
@@ -37,13 +65,63 @@
 
     <!-- Items Grid -->
     <div class="grid">
-      <a href="morning.html" class="item">IN THE MORNING</a>
       <a href="afternoon.html" class="item">IN THE AFTERNOON</a>
       <a href="evening.html" class="item">IN THE EVENING</a>
     </div>
+
+    <!-- Button to Show Morning Content -->
+    <button class="button" onclick="showContent('morning')">In the Morning</button>
+
+    <!-- Button to Show Afternoon Content -->
+    <button class="button" onclick="showContent('afternoon')">In the Afternoon</button>
+
+    <!-- Button to Show Evening Content -->
+    <button class="button" onclick="showContent('evening')">In the Evening</button>
+
+    <!-- Morning Content Section (hidden initially) -->
+    <div id="morning" class="content-section">
+      <h2>Morning</h2>
+      <p>These are the items I use in the morning!</p>
+      <a href="https://example.com/morning-details" target="_blank">
+        <img src="path-to-image1.jpg" alt="Morning drink" class="featured-image">
+      </a>
+    </div>
+
+    <!-- Afternoon Content Section (hidden initially) -->
+    <div id="afternoon" class="content-section">
+      <h2>Afternoon</h2>
+      <p>These are the items I use in the afternoon!</p>
+      <a href="https://example.com/afternoon-details" target="_blank">
+        <img src="path-to-image2.jpg" alt="Afternoon drink" class="featured-image">
+      </a>
+    </div>
+
+    <!-- Evening Content Section (hidden initially) -->
+    <div id="evening" class="content-section">
+      <h2>Evening</h2>
+      <p>These are the items I use in the evening!</p>
+      <a href="https://example.com/evening-details" target="_blank">
+        <img src="path-to-image3.jpg" alt="Evening drink" class="featured-image">
+      </a>
+    </div>
+
   </div>
 
-  <!-- Checkerboard at the Bottom -->
-  <div class="footer-checkerboard"></div>
+  <script>
+    // Function to show content based on the time of the day
+    function showContent(time) {
+      const sections = ['morning', 'afternoon', 'evening'];
+
+      // Loop through all sections and hide them
+      sections.forEach(function(section) {
+        const content = document.getElementById(section);
+        if (section === time) {
+          content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        } else {
+          content.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
