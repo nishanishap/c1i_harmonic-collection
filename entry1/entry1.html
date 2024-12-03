@@ -3,85 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nisha's Essential Items</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fceef1;
-    }
-    .header {
-      text-align: center;
-      padding: 20px;
-      background-color: #fffbf1;
-    }
-    .header h1 {
-      font-size: 24px;
-      color: #82c582;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin: 20px 0;
-    }
-    .button {
-      border: none;
-      background: #fff;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-      font-weight: bold;
-      color: #ff8787;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .button:hover {
-      transform: scale(1.1);
-    }
-    .image-display {
-      display: none;
-      text-align: center;
-      margin: 20px;
-    }
-    .image-display img {
-      width: 300px;
-      border-radius: 12px;
-    }
-    .image-display.active {
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-    <h1>Nisha's Everyday Essential Items</h1>
+  <title>Nisha's Everyday Essential Items</title>
+  <link rel="stylesheet" href="entry 1.css">
+  
+  <div class="item-container">
+  <!-- Morning Frame -->
+  <div class="frame frame-morning">
+    <div class="checkered-border"></div>
+    <div class="content">
+      <h2>Morning</h2>
+      <p>These are the items I use in the morning!</p>
+      <a href="https://example.com/morning-details" target="_blank">
+        <img src="path-to-image1.jpg" alt="Morning drink" class="featured-image">
+      </a>
+    </div>
   </div>
-  <div class="buttons">
-    <button class="button" onclick="showImage('morning')">IN THE MORNING</button>
-    <button class="button" onclick="showImage('afternoon')">IN THE AFTERNOON</button>
-    <button class="button" onclick="showImage('evening')">IN THE EVENING</button>
+
+  <!-- Details Frame -->
+  <div class="frame frame-details">
+    <div class="checkered-border"></div>
+    <div class="content">
+      <div class="badge">Morning</div>
+      <div class="item-list">
+        <!-- Static items without links -->
+        <div class="item">
+          <img src="path-to-image2.jpg" alt="Acuvue Oasys">
+          <p>Acuvue Oasys</p>
+        </div>
+        <div class="item">
+          <img src="path-to-image3.jpg" alt="Face Cleanser">
+          <p>Face Cleanser</p>
+        </div>
+        <div class="item">
+          <img src="path-to-image4.jpg" alt="Morning drink">
+          <p>Morning Drink</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div id="morning" class="image-display">
-    <img src="morning-image.png" alt="Morning Items">
-    <p>Morning, these are the items I use in the morning!</p>
-  </div>
-  <script>
-    function showImage(time) {
-      document.querySelectorAll('.image-display').forEach(display => {
-        display.classList.remove('active');
-      });
-      const selected = document.getElementById(time);
-      if (selected) {
-        selected.classList.add('active');
-      }
-    }
-  </script>
-</body>
-</html>
+</div>
