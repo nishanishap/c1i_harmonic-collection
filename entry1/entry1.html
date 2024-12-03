@@ -5,16 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nisha's Everyday Essential Items</title>
   <link rel="stylesheet" href="entry1.css">
-  
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fef1f1;
+      margin: 0;
+      padding: 0;
+    }
+    .item-container {
+      margin-top: 100px;
+    }
+    .frame {
+      border: 2px solid #4caf50;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 15px;
+      background-color: #fff;
+    }
+    .checkered-border {
+      border: 1px solid #4caf50;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .content {
+      margin-top: 20px;
+    }
+    .button-container {
+      margin: 40px 0;
+    }
+    .button {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    .content-section {
+      display: none;
+      margin-top: 20px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .content-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+
   <div class="item-container">
-  <!-- Morning Frame -->
-  <div class="frame frame-morning">
-    <div class="checkered-border"></div>
-    <div class="content">
-      <h2>Morning</h2>
-      <p>These are the items I use in the morning!</p>
-      <a href="https://example.com/morning-details" target="_blank">
-        <img src="path-to-image1.jpg" alt="Morning drink" class="featured-image">
-      </a>
+    <h1>Nisha's Everyday Essential Items</h1>
+
+    <!-- Button to Show Morning Content -->
+    <button class="button" onclick="showContent()">In the Morning</button>
+
+    <!-- Morning Content Section (hidden initially) -->
+    <div id="morning" class="content-section">
+      <div class="frame frame-morning">
+        <div class="checkered-border"></div>
+        <div class="content">
+          <h2>Morning</h2>
+          <p>These are the items I use in the morning!</p>
+          <a href="https://example.com/morning-details" target="_blank">
+            <img src="path-to-image1.jpg" alt="Morning drink" class="featured-image">
+          </a>
+        </div>
+      </div>
     </div>
+
   </div>
+
+  <script>
+    // Function to show Morning content
+    function showContent() {
+      const section = document.getElementById('morning');
+      section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
